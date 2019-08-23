@@ -66,9 +66,7 @@ const func3 = str => {
 // console.log(func3('orange'))
 
 const func4 = str => {
-  let res 
   let final = []
-  let alpha = [0, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
   let keypad = [
     [0],
      ['a','b','c'],
