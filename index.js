@@ -14,7 +14,7 @@ const func2A = str => {
   final = final.join()
   return final.replace(/,/g, '')
 }
-// console.log(func2('zmmxxxy'))
+// console.log(func2A('zaabbccc'))
 
 //! AMATEUR
 //*GOT IT
@@ -31,7 +31,7 @@ const func1 = str => {
     upper.length === split.length) return true
   else return false
 }
-// console.log(func1('Hello world'))
+// console.log(func1('have FUN'))
 
 //*GOT IT
 const func2 = arr => {
@@ -47,7 +47,7 @@ const func2 = arr => {
   })
   return final
 }
-// console.log(func2([1,1,1]))
+// console.log(func2([1,4, 0, 7, 3]))
 //* GOT IT
 const func3 = str => {
   let final = true
@@ -63,9 +63,10 @@ const func3 = str => {
   })
   return final
 }
-// console.log(func3('fish'))
+// console.log(func3('orange'))
 
 const func4 = str => {
+  let res 
   let final = []
   let alpha = [0, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
   let keypad = [
@@ -79,16 +80,14 @@ const func4 = str => {
      ['t','u','v'],
      ['w','x','y', 'z']
     ]
-  let split = str.toLowerCase().split('')
-  split.forEach((l,i)=> {
-    if(l !== '-'){
-      let index = keypad.indexOf(l)
-      console.log(index)
-      final.push(index)
-    } else {
-      final.push(l)
-    }
+  let splitString = str.toLowerCase().split('')
+  splitString.forEach((l,i)=> {
+    keypad.forEach((k, j)=> {
+      if(k.includes(l)) final.push(j)
+    })
   })
-  return final
+  let first = [final[0], final[1],final[2],'-', final[3],final[4],final[5], '-', final[5],final[6], final[7], final[8]]
+
+  return first.join().replace(/,/g, '')
 }
 console.log(func4('TRY-THE-FOOD'))
