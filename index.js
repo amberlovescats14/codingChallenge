@@ -1,3 +1,5 @@
+//! Professional
+//*GOT IT
 const func2A = str => {
   let final = []
   let split = str.split('')
@@ -88,4 +90,4 @@ const func4 = str => {
 
   return first.join().replace(/,/g, '')
 }
-console.log(func4('TRY-THE-FOOD'))
+// console.log(func4('TRY-THE-FOOD'))
